@@ -1,0 +1,103 @@
+.project-card {
+  position: relative;
+  overflow: hidden;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.project-card img {
+  transition: transform 0.4s ease;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-card:hover {
+  animation: cardHover 0.4s forwards;
+}
+
+@keyframes cardHover {
+  from {
+    transform: scale(1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  to {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.project-card img {
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover img {
+  animation: imageZoom 0.4s forwards;
+}
+
+@keyframes imageZoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+.card-title {
+  font-size: 1.25rem;
+  color: #007bff;
+  transition: color 0.4s ease;
+}
+
+.project-card:hover .card-title {
+  animation: titleColorChange 0.4s forwards;
+}
+
+@keyframes titleColorChange {
+  from {
+    color: #007bff;
+  }
+  to {
+    color: #0056b3;
+  }
+}
+
+.btn-container {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.project-card:hover .btn-container {
+  animation: btnAppear 0.4s forwards;
+}
+
+@keyframes btnAppear {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.btn-container button {
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.btn-container button:hover {
+  background-color: #0056b3;
+  color: #ffffff;
+}
