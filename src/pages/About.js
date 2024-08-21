@@ -25,8 +25,8 @@ const About = () => {
               roundedCircle
               alt="Profile"
               style={{
-                width: "400px",
-                height: "400px",
+                width: "300px",
+                height: "300px",
                 border: "4px solid #ddd",
                 boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
               }}
