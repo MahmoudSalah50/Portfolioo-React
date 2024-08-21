@@ -4,7 +4,8 @@
 
 .footer-links {
   display: flex;
-  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .footer-link {
@@ -18,7 +19,6 @@
 
 .social-icons {
   display: flex;
-  gap: 10px;
 }
 
 .social-icon {
